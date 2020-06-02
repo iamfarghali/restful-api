@@ -3,7 +3,7 @@
 ## Installation
 - Clone Project into Your Localhost 
     ```sh
-        git clone https://github.com/muhammed-farghali/bellman_task.git
+        git clone https://github.com/muhammed-farghali/restful-api.git
     ```
 - Be inside Project Directory 
     ```sh

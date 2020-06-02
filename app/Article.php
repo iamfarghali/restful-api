@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class Article extends Model
 {
-    protected $fillable = [ 'title', 'body' ];
+    protected $fillable = [ 'title', 'body', 'user_id' ];
 
     public function setTitleAttribute ( $value )
     {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Http\Resources\ArticleCollection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -19,7 +20,7 @@ class ArticleController extends Controller
         if ( count( $articles ) == 0 ) {
             return response()->json( null, 404 );
         }
-        return response()->json( $articles, 200 );
+        return response( new ArticleCollection( $articles ), 200 );
     }
 
     /**
@@ -53,6 +54,7 @@ class ArticleController extends Controller
         if ( !$article->id ) {
             return response()->json( null, 404 );
         }
+//        return response()->json( new ArticleResource( $article ), 200 );
         return response()->json( $article, 200 );
     }
 

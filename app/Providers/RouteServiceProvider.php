@@ -34,7 +34,7 @@ class RouteServiceProvider extends ServiceProvider
 
         // Return article based on its slug
         Route::bind( 'slug', function ( $slug ) {
-            return Article::where( 'slug', $slug )->first();
+            return Article::with( 'replies' )->where( 'slug', $slug )->first();
         } );
     }
 

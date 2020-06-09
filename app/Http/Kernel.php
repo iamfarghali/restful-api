@@ -44,6 +44,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             //            \App\Http\Middleware\TokenAuth::class,
             //            \App\Http\Middleware\BasicAuth::class,
+            'auth:api'
         ],
     ];
 
